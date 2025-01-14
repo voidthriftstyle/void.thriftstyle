@@ -1,0 +1,197 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   HOODIE ZIPPER PRODUCT
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   /* Hamburger Menu Animation */
+        .hamburger {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .description {
+            max-height: 4.5rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .description.expanded {
+            max-height: 100%;
+        }
+
+        .read-more {
+            color: #1d4ed8;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #1e40af;
+        }
+  </style>
+ </head>
+ <body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+  <header class="bg-blue-900 text-white py-4 relative">
+   <div class="container mx-auto flex items-center justify-between pl-4 pr-4">
+    <div class="flex items-center">
+     <img alt="Logo of the product showcase, a circular icon with a shopping cart" class="w-12 h-12 rounded-full mr-4" src="LOGO BULAT.jpg"/>
+     <div>
+      <h1 class="text-xl font-bold">
+       VOID
+      </h1>
+      <p class="text-xl font-bold">
+       THRIFTSTYLE
+      </p>
+     </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+     <div>
+     </div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+   </div>
+   <div class="menu" id="menu">
+    <a href="index.html">
+     Beranda
+    </a>
+    <a href="https://www.instagram.com/void.triftsyle?igsh=Y3lwN28wOGt4cXZu&utm_source=qr">
+     Customer Service
+    </a>
+   </div>
+  </header>
+  <main class="container mx-auto mt-8 overflow-auto">
+   <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center mx-4 md:mx-0">
+    <img alt="WORKSHIT" class="w-full md:w-1/3 rounded-lg" src="workshit.jpg"/>
+    <div class="md:ml-6 mt-4 md:mt-0">
+     <h2 class="text-2xl font-bold font-playfair">
+      WORKSHIT
+     </h2>
+     <p class="mt-2 text-gray-600 font-bold description" id="description">
+        Teliti sebelum membeli
+     </p>Kondisi: 9,5/10
+    </P>Size: L
+    <p class="mt-2 text-gray-600 font-bold description" id="description">
+    NO RETURN NO REFUND
+     </p>
+     <span class="read-more" id="read-more" onclick="toggleReadMore()">
+     </span>
+     <p class="mt-4 text-xl text-red-500 font-bold">
+      $80.000IDR
+     </p>
+     <div class="mt-4 flex items-center space-x-4">
+      <a class="inline-block bg-indigo-500 text-white py-3 px-24 rounded hover:bg-indigo-600 flex items-center justify-center" href="https://wa.me/6283833965816?text=*Assalammualaikum*%0A*Mau%20order%20dong*">
+       <i class="fas fa-shopping-cart text-xl">
+       </i>
+      </a>
+      <a class="inline-block bg-green-500 text-white py-3 px-4 rounded-full hover:bg-green-600 flex items-center justify-center h-full transform translate-y-1" href="https://www.instagram.com/void.triftsyle?igsh=Y3lwN28wOGt4cXZu&utm_source=qr">
+       <i class="fas fa-headset text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+   <footer class="bg-white text-gray-600 py-2 mt-8">
+    <div class="container mx-auto text-center">
+     <p>
+      © 2025 FX Intellegence & Voidthriftstyle. All rights reserved.
+     </p>
+    </div>
+   </footer>
+  </main>
+  <script>
+   function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.getElementById('menu');
+            hamburger.classList.toggle('open');
+            menu.classList.toggle('open');
+        }
+
+        function toggleReadMore() {
+            const description = document.getElementById('description');
+            const readMore = document.getElementById('read-more');
+            if (description.scrollHeight > description.clientHeight) {
+                description.classList.toggle('expanded');
+                if (description.classList.contains('expanded')) {
+                    readMore.textContent = 'Baca Lebih Sedikit';
+                } else {
+                    readMore.textContent = 'Baca Selengkapnya';
+                }
+            } else {
+                readMore.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const description = document.getElementById('description');
+            const readMore = document.getElementById('read-more');
+            if (description.scrollHeight > description.clientHeight) {
+                readMore.textContent = 'Baca Selengkapnya';
+            } else {
+                readMore.style.display = 'none';
+            }
+        });
+  </script>
+ </body>
+</html>
